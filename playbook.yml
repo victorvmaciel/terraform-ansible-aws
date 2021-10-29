@@ -1,8 +1,9 @@
 - hosts: aws-hosts
   tasks:
-  - name: creating a file
-    copy:
-      dest: /home/ubuntu/index.html
-      content: <h1> Hello World <h2>
-  - name: creating a server   
-    shell: "nohup busybox httpd -f -p 8080 &" 
+  - name: Installing python3, venv
+    apt:
+      pkg:
+      - python3
+      - virtualenv
+      update-cache: yes
+    become: yes  

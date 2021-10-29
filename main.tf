@@ -18,7 +18,7 @@ resource "aws_instance" "app_server" {
   key_name = "oregon_terraform_key"
   # user_data = 
   tags=  {
-    Name = "Terraform | Ansible | AWS"
+    Name = "Python Venv"
 
   }
  }
